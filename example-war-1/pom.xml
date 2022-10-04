@@ -32,6 +32,8 @@
                             <goal>start</goal>
                         </goals>
                         <configuration>
+                            <deployMode>FORK</deployMode>
+                            <maxChildStartCheckMs>1000</maxChildStartCheckMs>
                             <httpConnector>
                                 <host>127.0.0.1</host>
                                 <port>18080</port>
@@ -42,6 +44,7 @@
                             </webApp>
                             <stopKey>foo</stopKey>
                             <stopPort>19999</stopPort>
+<!--                            <jvmArgs>-Djetty.http.port=18080</jvmArgs>-->
                         </configuration>
                     </execution>
                     <execution>
