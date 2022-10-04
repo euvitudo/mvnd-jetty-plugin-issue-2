@@ -34,17 +34,13 @@
                         <configuration>
                             <deployMode>FORK</deployMode>
                             <maxChildStartCheckMs>1000</maxChildStartCheckMs>
-                            <httpConnector>
-                                <host>127.0.0.1</host>
-                                <port>28080</port>
-                            </httpConnector>
                             <classesDirectory>${project.build.directory}/classes</classesDirectory>
                             <webApp>
                                 <contextPath>/mvnd-test</contextPath>
                             </webApp>
                             <stopKey>foo</stopKey>
                             <stopPort>29999</stopPort>
-<!--                            <jvmArgs>-Djetty.http.port=28080</jvmArgs>-->
+                            <jvmArgs>-Djetty.http.port=28080</jvmArgs>
                         </configuration>
                     </execution>
                     <execution>
